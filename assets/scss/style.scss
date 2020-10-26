@@ -1,0 +1,267 @@
+// --- fonts
+@font-face {
+    font-family: 'Book Antiqua';
+    src: url('../fonts/Book_Antiqua.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700;800&display=swap');
+// === / fonts
+// --- mixins
+// === / mixins
+// --- variables
+$screen_xs_max: 575px;
+$screen_sm_max: 767px;
+$screen_md_max: 991px;
+$screen_lg_max: 1199px;
+$screen_sm: 576px;
+$screen_md: 768px;
+$screen_lg: 992px;
+$screen_xl: 1200px;
+// === / variables
+// --- commons
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Spectral', serif;
+    font-size: 20px;
+    background-color: #FDF8F4;
+    overflow-x: hidden;
+    a,
+    a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .container {
+        max-width: 1280px;
+    }
+    .phone_numbers {
+        a {
+            display: block;
+        }
+    }
+    .section_title {
+        font-family: 'Book Antiqua';
+        font-size: 45px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.9);
+        margin-bottom: 75px;
+    }
+    .brand_btn {
+        display: inline-block;
+        background: #755A5A;
+        border-radius: 5px;
+        font-weight: 300;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 12px 50px;
+    }
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+// --- header
+.header {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 50px 0;
+    .logo {
+        font-family: 'Book Antiqua', serif;
+        font-weight: bold;
+        font-size: 50px;
+        color: #FDF8F4;
+    }
+    .menu {
+        display: flex;
+        justify-content: center;
+        li+li {
+            margin-left: 40px;
+        }
+        .menu_item a {
+            font-weight: 300;
+            font-size: 24px;
+        }
+    }
+}
+
+// === / header
+// --- section_intro
+.section_intro {
+    padding: 0;
+    .image_wrap {
+        height: 890px;
+        position: absolute;
+        top: 0;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            // z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: rgba(1, 1, 1, 0.6);
+        }
+    }
+    .intro_wrap {
+        margin-top: 400px;
+        position: relative;
+        .bg_image {
+            position: absolute;
+            z-index: 1;
+            bottom: -330px;
+            right: 0px;
+            // transform: rotate(133deg);
+        }
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    .intro_title {
+        font-family: 'Book Antiqua';
+        font-weight: bold;
+        font-size: 65px;
+        color: #FDF8F4;
+        margin-bottom: 20px;
+    }
+    .intro_subtitle {
+        font-weight: 300;
+        font-size: 30px;
+        color: #FFFBFA;
+    }
+    .images_grid {
+        margin-top: 160px;
+        position: relative;
+        img+img {
+            margin-top: 30px;
+        }
+        img {
+            position: relative;
+            z-index: 3;
+        }
+    }
+}
+
+// === / section_intro
+// --- section_price
+.section_price {
+    padding-top: 200px;
+    .price_text {
+        font-weight: 300;
+        font-size: 20px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.7);
+    }
+    .massage_prices_wrap {
+        margin-top: 50px;
+        .massage_item {
+            background: #FFFBFA;
+            box-shadow: 4px 4px 10px rgba(149, 113, 104, 0.4);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 300;
+            font-size: 24px;
+            color: #000000;
+        }
+    }
+    .massage_button {
+        margin-top: 50px;
+    }
+}
+
+// === / section_price
+// --- section_spa_procedures
+.section_spa_procedures {
+    .bg_image {
+        position: absolute;
+        &__spa-1 {
+            top: -280px;
+            left: -350px;
+            transform: rotate(-100deg) scale(0.6);
+        }
+        &__spa-2 {
+            bottom: -450px;
+            right: -292px;
+            transform: rotate(-10deg) scale(0.8);
+        }
+    }
+    .images_grid {
+        // margin-top: 160px;
+        position: relative;
+        .img_wrap+.img_wrap {
+            margin-top: 30px;
+        }
+        img {
+            position: relative;
+            z-index: 3;
+        }
+        .img_wrap {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 4;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: rgba($color: #000000, $alpha: 0.6);
+            }
+            .img_title {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 30px;
+                text-align: center;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+// === / section_spa_procedures
+// --- section_reasons
+.section_reasons {}
+
+// === / section_reasons
+// --- section_advantages
+.section_advantages {}
+
+// === / section_advantages
+// --- section_special_offer
+.section_special_offer {}
+
+// === / section_special_offer
+// --- section_all_services
+.section_all_services {}
+
+// === / section_all_services
+// --- footer
+.footer {}
+
+// === / footer
