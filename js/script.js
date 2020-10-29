@@ -1,26 +1,14 @@
 $(document).ready(function() {
 
-    btnUp = $('#button_up_link')
-
-    // smooth scrolling
-    $(".nav_link").on("click", function(e) {
+    $('.massage_button').click(function(e) {
         e.preventDefault();
-        let id = $(this).attr('href');
-        let top = $(id).offset().top;
-        $('body,html').animate({ scrollTop: top }, 900);
+        $massageTitle = $(this).parent().children('.service_item_title').text();
+        $('.modal-title, .massage_name').text($massageTitle);
     });
 
-    // toggle bg color of menu items
-    $('.menu_item').click(function(e) {
+    // console.log($('.service_item_title').text())
+    $('#toggle_button').click(function(e) {
         e.preventDefault();
-        $('.menu_item').removeClass('active');
-        $(this).addClass('active');
+        $('body').toggleClass('menu_show')
     });
-
-    // toggle class menu_active
-    $('.toggle_button, .dark_layer, .menu_item').click(function(e) {
-        e.preventDefault();
-        $('body').toggleClass('menu_active')
-    });
-
 });

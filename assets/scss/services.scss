@@ -1,0 +1,142 @@
+// --- styles
+@import "commons.scss";
+// === / styles
+// --- section_intro
+section {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 23px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.body .intro_title {
+    margin-top: 100px;
+}
+
+.section_intro {
+    padding: 0;
+    position: relative;
+    .intro_title {
+        font-size: 48px;
+    }
+    .intro_wrap {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+// === / section_intro
+// --- section_promo
+.section_preview {
+    .bg_image {
+        position: absolute;
+        top: -310px;
+        left: -300px;
+        transform: rotate(-75deg) scale(0.6);
+    }
+}
+
+// === / section_promo
+// --- section_services_massage
+.section_services_massage {
+    padding: 0;
+    .massage_item_wrap {
+        padding-bottom: 30px;
+    }
+    .massage_item_inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .massage_item {
+        position: relative;
+        z-index: 3;
+        .service_item_title {
+            margin-bottom: 20px;
+        }
+        ul {
+            li+li {
+                margin-top: 6px;
+            }
+            li::before {
+                content: "";
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background: url(../img/svg/list_marker.svg) no-repeat 0 0;
+                background-size: 100%;
+                margin-right: 15px;
+            }
+        }
+        .massage_button {
+            margin-top: 30px;
+            min-width: 200px;
+        }
+    }
+    .bg_image {
+        position: absolute;
+        &__massage-1 {
+            top: -72px;
+            right: 90px;
+            transform: rotate(171deg) scale(0.6);
+        }
+        &__massage-2 {
+            bottom: -423px;
+            right: 0px;
+            transform: rotate(171deg) scale(0.4);
+        }
+        &__massage-3 {
+            bottom: -196px;
+            left: -476px;
+            transform: rotate(100deg) scale(0.65);
+        }
+        &__massage-4 {
+            bottom: -182px;
+            right: 0px;
+            transform: rotate(187deg) scale(0.37);
+        }
+    }
+}
+
+// === / section_services_massage
+// --- section_promo
+.section_promo {
+    .promo_text {
+        position: relative;
+        &::before {
+            position: absolute;
+            top: -55px;
+            left: -20px;
+            content: "";
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background: url(../img/svg/quotes-start.svg) no-repeat 0 0;
+            background-size: 100%;
+        }
+        &::after {
+            position: absolute;
+            bottom: -35px;
+            right: -60px;
+            content: "";
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background: url(../img/svg/quotes-finish.svg) no-repeat 0 0;
+            background-size: 100%;
+        }
+    }
+}
+
+// === / section_promo

@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700;800&display=swap");
+@font-face {
+  font-family: 'Book Antiqua';
+  src: url("../fonts/Book_Antiqua.ttf"); }
+
+* {
+  box-sizing: border-box; }
+
+.body {
+  font-family: 'Spectral', serif;
+  font-size: 20px;
+  background-color: #FDF8F4;
+  overflow-x: hidden; }
+  .body a,
+  .body a:hover {
+    text-decoration: none;
+    color: #fff; }
+  .body ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .body .container {
+    max-width: 1280px; }
+    @media (min-width: 576px) and (max-width: 1199px) {
+      .body .container {
+        padding-left: 30px;
+        padding-right: 30px; } }
+  .body .phone_numbers {
+    position: relative;
+    z-index: 3; }
+    .body .phone_numbers a {
+      display: block; }
+  .body .section_title {
+    font-family: 'Book Antiqua';
+    font-size: 45px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+    margin-bottom: 75px; }
+    @media (max-width: 575px) {
+      .body .section_title {
+        font-size: 30px;
+        margin-bottom: 50px; } }
+  .body .brand_btn {
+    border: none;
+    outline: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: 300;
+    text-align: center;
+    color: #FFFFFF; }
+    .body .brand_btn__secondary {
+      padding: 10px;
+      background: #838383;
+      transition: .3s; }
+      .body .brand_btn__secondary:hover {
+        background: #979797; }
+    .body .brand_btn__primary {
+      padding: 10px 50px;
+      background: #755A5A;
+      transition: .3s; }
+      .body .brand_btn__primary:hover {
+        background: #8c6c6c; }
+  .body .intro_title {
+    font-family: 'Book Antiqua';
+    font-weight: bold;
+    font-size: 65px;
+    color: #FDF8F4; }
+    @media (max-width: 991px) {
+      .body .intro_title {
+        font-size: 42px; } }
+  .body .intro_subtitle {
+    font-weight: 300;
+    font-size: 30px;
+    color: #FFFBFA; }
+    @media (max-width: 991px) {
+      .body .intro_subtitle {
+        font-size: 24px; } }
+  .body .promo_text {
+    font-size: 24px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center; }
+  .body .form .input {
+    width: 100%;
+    margin-top: 10px;
+    filter: drop-shadow(4px 4px 10px rgba(149, 113, 104, 0.2));
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 20px; }
+  .body .service_item_title {
+    font-weight: 300;
+    font-size: 30px;
+    color: #1D1B1B; }
+  .body .modal-header {
+    padding: 1em 1.5em; }
+  .body .modal-body {
+    padding: 1em 1.5em; }
+  .body .modal-footer {
+    padding: 1em 1.5em; }
+  .body.menu_show {
+    overflow: hidden; }
+    .body.menu_show .toggle_button .button_item {
+      background-color: rgba(0, 0, 0, 0.8); }
+    .body.menu_show .menu {
+      opacity: 1;
+      visibility: visible; }
+    .body.menu_show .phone_numbers a {
+      color: rgba(0, 0, 0, 0.8); }
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media (max-width: 575px) {
+    section {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+
+.header {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 50px 0; }
+  .header .logo {
+    line-height: 1;
+    font-family: 'Book Antiqua', serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: #FDF8F4; }
+  .header .menu {
+    display: flex;
+    justify-content: center; }
+    .header .menu li + li {
+      margin-left: 40px; }
+    .header .menu .menu_item a {
+      font-weight: 300;
+      font-size: 24px; }
+  @media (max-width: 991px) {
+    .header .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; }
+      .header .menu li + li {
+        margin-left: 0;
+        margin-top: 10px; }
+      .header .menu .menu_item a {
+        font-size: 32px; } }
+  @media (max-width: 575px) {
+    .header {
+      padding-top: 0; }
+      .header .menu {
+        align-items: center;
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #FDF8F4;
+        opacity: 0;
+        visibility: hidden; }
+        .header .menu a {
+          color: #1D1B1B; }
+      .header .toggle_button {
+        position: relative;
+        z-index: 3;
+        width: 36px;
+        height: 23px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        .header .toggle_button::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          background: rgba(0, 0, 0, 0.3);
+          margin-top: -18px;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          transform: scale(1.5);
+          opacity: 0;
+          transition: .3s; }
+        .header .toggle_button:active::before {
+          opacity: 1; }
+        .header .toggle_button .button_item {
+          position: relative;
+          width: 100%;
+          height: 2px;
+          border-radius: 2px;
+          background-color: #FDF8F4; } }
+
+.services {
+  padding: 50px 0;
+  background: rgba(117, 90, 90, 0.8);
+  overflow: hidden; }
+  .services .bg_image {
+    position: absolute;
+    bottom: -268px;
+    right: 77px;
+    transform: rotate(159deg) scale(0.7); }
+  .services .services_title {
+    font-weight: 500;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 30px; }
+  .services .services_list a,
+  .services .bottom_text {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8); }
+  .services .services_list li + li {
+    margin-top: 15px; }
+  .services .logo {
+    line-height: 1;
+    font-family: 'Book Antiqua';
+    font-weight: bold;
+    font-size: 50px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 35px; }
+  .services .bottom_text {
+    text-align: right; }
+
+.section_intro {
+  padding: 0; }
+  .section_intro .image_wrap {
+    position: absolute;
+    top: 0; }
+    .section_intro .image_wrap img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
+    .section_intro .image_wrap::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(1, 1, 1, 0.6); }
+  .section_intro .intro_wrap {
+    margin-top: 400px;
+    position: relative; }
+    .section_intro .intro_wrap .bg_image {
+      position: absolute;
+      z-index: 1;
+      bottom: -330px;
+      right: 100px; }
+  .section_intro .container {
+    position: relative;
+    z-index: 1; }
+  .section_intro .images_grid {
+    margin-top: 160px;
+    position: relative; }
+    .section_intro .images_grid img + img {
+      margin-top: 30px; }
+    .section_intro .images_grid img {
+      position: relative;
+      z-index: 3; }
+  @media (min-width: 1200px) {
+    .section_intro .image_wrap {
+      height: 890px; } }
+  @media (min-width: 768px) {
+    .section_intro .image_wrap {
+      margin-bottom: 20px; } }
+  @media (min-width: 576px) and (max-width: 1199px) {
+    .section_intro .image_wrap {
+      height: 800px; } }
+  @media (max-width: 1199px) {
+    .section_intro .intro_wrap .bg_image {
+      position: absolute;
+      z-index: 1;
+      bottom: -458px;
+      right: 100px;
+      transform: rotate(83deg) scale(0.6); } }
+  @media (max-width: 575px) {
+    .section_intro .image_wrap {
+      height: 558px; }
+    .section_intro .intro_wrap {
+      margin-top: 200px; }
+    .section_intro .images_grid {
+      margin-top: 100px; }
+      .section_intro .images_grid img + img {
+        margin-top: 15px; } }
+
+.section_price {
+  padding-top: 200px; }
+  .section_price .price_text {
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7); }
+  .section_price .massage_prices_wrap {
+    margin-top: 50px; }
+    .section_price .massage_prices_wrap .massage_item_wrap {
+      padding-bottom: 20px; }
+    .section_price .massage_prices_wrap .massage_item {
+      background: #FFFBFA;
+      box-shadow: 4px 4px 10px rgba(149, 113, 104, 0.4);
+      border-radius: 10px;
+      padding: 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 300;
+      font-size: 24px;
+      color: #000000; }
+  @media (max-width: 575px) {
+    .section_price {
+      padding-top: 100px; } }
+
+.section_spa_procedures .bg_image {
+  position: absolute; }
+  .section_spa_procedures .bg_image__spa-1 {
+    top: -280px;
+    left: -350px;
+    transform: rotate(-100deg) scale(0.6); }
+  .section_spa_procedures .bg_image__spa-2 {
+    bottom: -450px;
+    right: 100px;
+    transform: rotate(-10deg) scale(0.8); }
+
+.section_spa_procedures .images_grid {
+  position: relative; }
+  .section_spa_procedures .images_grid .img_wrap + .img_wrap {
+    margin-top: 30px; }
+  .section_spa_procedures .images_grid img {
+    position: relative;
+    z-index: 3; }
+  .section_spa_procedures .images_grid .img_wrap {
+    display: block;
+    position: relative; }
+    .section_spa_procedures .images_grid .img_wrap::after {
+      content: "";
+      position: absolute;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6); }
+    .section_spa_procedures .images_grid .img_wrap .img_title {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-align: center;
+      color: #FFFFFF; }
+
+@media (max-width: 1199px) {
+  .section_spa_procedures .images_grid .img_wrap .img_title {
+    font-size: 20px; } }
+
+@media (max-width: 991px) {
+  .section_spa_procedures .bg_image__spa-1 {
+    top: -550px;
+    left: -198px;
+    transform: rotate(-8deg) scale(0.5); }
+  .section_spa_procedures .bg_image__spa-2 {
+    bottom: -499px;
+    right: -79px;
+    transform: rotate(98deg) scale(0.3); }
+  .section_spa_procedures .images_grid .img_wrap + .img_wrap {
+    margin-top: 2rem; } }
+
+.section_reasons .reason_item {
+  margin-top: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9); }
+  .section_reasons .reason_item .reason_title {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 25px; }
+
+@media (max-width: 1199px) {
+  .section_reasons .reason_title {
+    height: 90px;
+    display: flex;
+    align-items: center; } }
+
+.section_special_offer .bg_image {
+  position: absolute;
+  top: -300px;
+  left: -380px;
+  transform: rotate(139deg) scale(0.38); }
+
+.section_special_offer .image_wrap {
+  position: relative; }
+  .section_special_offer .image_wrap::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); }
+  .section_special_offer .image_wrap .image_title {
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: #FFFFFF; }
+    .section_special_offer .image_wrap .image_title span {
+      margin: 0 15px; }
+
+@media (max-width: 991px) {
+  .section_special_offer .bg_image {
+    position: absolute;
+    top: -494px;
+    left: -134px;
+    transform: rotate(-26deg) scale(0.28); } }
+
+@media (max-width: 575px) {
+  .section_special_offer .image_wrap .image_title {
+    left: 50%;
+    margin-left: -125px;
+    text-align: center;
+    max-width: 250px;
+    font-size: 24px; } }
+
+.section_advantages .bg_image {
+  position: absolute; }
+  .section_advantages .bg_image__advantages-1 {
+    top: -53px;
+    left: -427px;
+    transform: rotate(-11deg) scale(0.5); }
+  .section_advantages .bg_image__advantages-2 {
+    bottom: -447px;
+    right: 0px;
+    transform: rotate(141deg) scale(0.7); }
+
+.section_advantages .advantages_item_wrap {
+  padding: 15px; }
+
+.section_advantages .advantages_item {
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 10px rgba(149, 113, 104, 0.4);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 230px;
+  padding: 30px 10px; }
+
+.section_advantages .advantages_icon {
+  margin-bottom: 20px; }
+
+.section_advantages .advantages_title {
+  width: 200px;
+  color: rgba(0, 0, 0, 0.9); }
+
+@media (max-width: 991px) {
+  .section_advantages .bg_image__advantages-2 {
+    bottom: -543px;
+    right: -119px;
+    transform: rotate(158deg) scale(0.4); }
+  .section_advantages .bg_image__advantages-1 {
+    top: -419px;
+    left: -154px;
+    transform: rotate(88deg) scale(0.4); } }
+
+.section_contacts .contacts_wrap li + li {
+  margin-top: 25px; }
+
+.section_contacts .contacts_wrap li a {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.9); }

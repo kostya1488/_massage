@@ -1,7 +1,9 @@
 $(document).ready(function() {
     $("#ajax_form").submit(
         function() {
-            sendAjaxForm('ajax_form', 'php/formhandler.php');
+            // sendAjaxForm('ajax_form', 'php/formhandler.php');
+            // $('.modal').removeClass('show')
+            $('#exampleModal').modal('hide')
             return false;
         }
     );

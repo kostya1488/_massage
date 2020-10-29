@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700;800&display=swap");
+@font-face {
+  font-family: 'Book Antiqua';
+  src: url("../fonts/Book_Antiqua.ttf"); }
+
+* {
+  box-sizing: border-box; }
+
+.body {
+  font-family: 'Spectral', serif;
+  font-size: 20px;
+  background-color: #FDF8F4;
+  overflow-x: hidden; }
+  .body a,
+  .body a:hover {
+    text-decoration: none;
+    color: #fff; }
+  .body ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .body .container {
+    max-width: 1280px; }
+  .body .phone_numbers a {
+    display: block; }
+  .body .section_title {
+    font-family: 'Book Antiqua';
+    font-size: 45px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+    margin-bottom: 75px; }
+  .body .brand_btn {
+    border: none;
+    outline: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: 300;
+    text-align: center;
+    color: #FFFFFF; }
+    .body .brand_btn__secondary {
+      padding: 10px;
+      background: #838383;
+      transition: .3s; }
+      .body .brand_btn__secondary:hover {
+        background: #979797; }
+    .body .brand_btn__primary {
+      padding: 10px 50px;
+      background: #755A5A;
+      transition: .3s; }
+      .body .brand_btn__primary:hover {
+        background: #8c6c6c; }
+  .body .intro_title {
+    font-family: 'Book Antiqua';
+    font-weight: bold;
+    font-size: 65px;
+    color: #FDF8F4; }
+  .body .promo_text {
+    font-size: 24px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center; }
+  .body .form .input {
+    width: 100%;
+    margin-top: 10px;
+    filter: drop-shadow(4px 4px 10px rgba(149, 113, 104, 0.2));
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 20px; }
+  .body .service_item_title {
+    font-weight: 300;
+    font-size: 30px;
+    color: #1D1B1B; }
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+.header {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 50px 0; }
+  .header .logo {
+    font-family: 'Book Antiqua', serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: #FDF8F4; }
+  .header .menu {
+    display: flex;
+    justify-content: center; }
+    .header .menu li + li {
+      margin-left: 40px; }
+    .header .menu .menu_item a {
+      font-weight: 300;
+      font-size: 24px; }
+
+.services {
+  padding: 50px 0;
+  background: rgba(117, 90, 90, 0.8);
+  overflow: hidden; }
+  .services .bg_image {
+    position: absolute;
+    bottom: -268px;
+    right: 77px;
+    transform: rotate(159deg) scale(0.7); }
+  .services .services_title {
+    font-weight: 500;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 30px; }
+  .services .services_list a,
+  .services .bottom_text {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8); }
+  .services .services_list li + li {
+    margin-top: 15px; }
+  .services .logo {
+    font-family: 'Book Antiqua';
+    font-weight: bold;
+    font-size: 50px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 35px; }
+  .services .bottom_text {
+    text-align: right; }
+
+section {
+  padding-top: 150px;
+  padding-bottom: 150px; }
+
+p {
+  font-weight: 300;
+  font-size: 23px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8); }
+
+.section_intro {
+  padding: 0;
+  position: relative; }
+  .section_intro .intro_wrap {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+
+.section_preview .bg_image {
+  position: absolute;
+  top: -310px;
+  left: -300px;
+  transform: rotate(-75deg) scale(0.6); }
+
+.section_services_massage {
+  padding: 0; }
+  .section_services_massage .massage_item_wrap {
+    padding-bottom: 30px; }
+  .section_services_massage .massage_item_inner {
+    position: relative;
+    display: flex;
+    align-items: center; }
+  .section_services_massage .massage_item {
+    position: relative;
+    z-index: 3; }
+    .section_services_massage .massage_item .service_item_title {
+      margin-bottom: 20px; }
+    .section_services_massage .massage_item ul li + li {
+      margin-top: 6px; }
+    .section_services_massage .massage_item ul li::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: url(../img/svg/list_marker.svg) no-repeat 0 0;
+      background-size: 100%;
+      margin-right: 15px; }
+    .section_services_massage .massage_item .massage_button {
+      margin-top: 30px;
+      min-width: 200px; }
+  .section_services_massage .bg_image {
+    position: absolute; }
+    .section_services_massage .bg_image__massage-1 {
+      top: -72px;
+      right: -394px;
+      transform: rotate(171deg) scale(0.6); }
+    .section_services_massage .bg_image__massage-2 {
+      bottom: -423px;
+      right: -259px;
+      transform: rotate(171deg) scale(0.4); }
+    .section_services_massage .bg_image__massage-3 {
+      bottom: -196px;
+      left: -476px;
+      transform: rotate(100deg) scale(0.65); }
+    .section_services_massage .bg_image__massage-4 {
+      bottom: -182px;
+      right: -168px;
+      transform: rotate(187deg) scale(0.37); }
+
+.section_promo .promo_text {
+  position: relative; }
+  .section_promo .promo_text::before {
+    position: absolute;
+    top: -55px;
+    left: -20px;
+    content: "";
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background: url(../img/svg/quotes-start.svg) no-repeat 0 0;
+    background-size: 100%; }
+  .section_promo .promo_text::after {
+    position: absolute;
+    bottom: -35px;
+    right: -60px;
+    content: "";
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background: url(../img/svg/quotes-finish.svg) no-repeat 0 0;
+    background-size: 100%; }

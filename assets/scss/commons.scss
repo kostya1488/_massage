@@ -1,0 +1,307 @@
+// --- variables
+$screen_xs_max: 575px;
+$screen_sm_max: 767px;
+$screen_md_max: 991px;
+$screen_lg_max: 1199px;
+$screen_sm: 576px;
+$screen_md: 768px;
+$screen_lg: 992px;
+$screen_xl: 1200px;
+// === / variables
+// --- fonts
+@font-face {
+    font-family: 'Book Antiqua';
+    src: url('../fonts/Book_Antiqua.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700;800&display=swap');
+// === / fonts
+// --- mixins
+// === / mixins
+// --- commons
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Spectral', serif;
+    font-size: 20px;
+    background-color: #FDF8F4;
+    overflow-x: hidden;
+    a,
+    a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .container {
+        max-width: 1280px;
+        @media (min-width: $screen_sm) and (max-width: $screen_lg_max) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    .phone_numbers {
+        position: relative;
+        z-index: 3;
+        a {
+            display: block;
+        }
+    }
+    .section_title {
+        font-family: 'Book Antiqua';
+        font-size: 45px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.9);
+        margin-bottom: 75px;
+        @media (max-width: $screen_xs_max) {
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+    }
+    .brand_btn {
+        border: none;
+        outline: none;
+        display: inline-block;
+        border-radius: 5px;
+        font-weight: 300;
+        text-align: center;
+        color: #FFFFFF;
+        &__secondary {
+            padding: 10px;
+            background: #838383;
+            transition: .3s;
+            &:hover {
+                background: lighten($color: #838383, $amount: 8%)
+            }
+        }
+        &__primary {
+            padding: 10px 50px;
+            background: #755A5A;
+            transition: .3s;
+            &:hover {
+                background: lighten($color: #755A5A, $amount: 8%)
+            }
+        }
+    }
+    .intro_title {
+        font-family: 'Book Antiqua';
+        font-weight: bold;
+        font-size: 65px;
+        color: #FDF8F4;
+        @media (max-width: $screen_md_max) {
+            font-size: 42px;
+        }
+    }
+    .intro_subtitle {
+        font-weight: 300;
+        font-size: 30px;
+        color: #FFFBFA;
+        @media (max-width: $screen_md_max) {
+            font-size: 24px;
+        }
+    }
+    .promo_text {
+        font-size: 24px;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+    }
+    .form {
+        .input {
+            width: 100%;
+            margin-top: 10px;
+            filter: drop-shadow(4px 4px 10px rgba(149, 113, 104, 0.2));
+            border-radius: 5px;
+            background-color: #fff;
+            border: none;
+            outline: none;
+            padding: 15px 20px;
+            // font-family: 'Spectral', serif;
+        }
+    }
+    .service_item_title {
+        font-weight: 300;
+        font-size: 30px;
+        color: #1D1B1B;
+    }
+    .modal-header {
+        padding: 1em 1.5em;
+    }
+    .modal-body {
+        padding: 1em 1.5em;
+    }
+    .modal-footer {
+        padding: 1em 1.5em;
+    }
+    &.menu_show {
+        overflow: hidden;
+        .toggle_button {
+            .button_item {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+        }
+        .menu {
+            opacity: 1;
+            visibility: visible;
+        }
+        .phone_numbers a {
+            color: rgba(0, 0, 0, 0.8);
+        }
+    }
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @media (max-width: $screen_xs_max) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+// --- header
+.header {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 50px 0;
+    .logo {
+        line-height: 1;
+        font-family: 'Book Antiqua', serif;
+        font-weight: bold;
+        font-size: 50px;
+        color: #FDF8F4;
+    }
+    .menu {
+        display: flex;
+        justify-content: center;
+        li+li {
+            margin-left: 40px;
+        }
+        .menu_item a {
+            font-weight: 300;
+            font-size: 24px;
+        }
+    }
+    @media (max-width: $screen_md_max) {
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            // justify-content: center;
+            li+li {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            .menu_item a {
+                font-size: 32px;
+            }
+        }
+    }
+    @media (max-width: $screen_xs_max) {
+        // position: static;
+        padding-top: 0;
+        .menu {
+            align-items: center;
+            position: fixed;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #FDF8F4;
+            opacity: 0;
+            visibility: hidden;
+            a {
+                color: #1D1B1B;
+            }
+        }
+        .toggle_button {
+            position: relative;
+            z-index: 3;
+            width: 36px;
+            height: 23px;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                // z-index: 1;
+                background: rgba(0, 0, 0, 0.3);
+                margin-top: -18px;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                transform: scale(1.5);
+                opacity: 0;
+                transition: .3s;
+            }
+            &:active {
+                &::before {
+                    opacity: 1;
+                }
+            }
+            .button_item {
+                position: relative;
+                width: 100%;
+                height: 2px;
+                border-radius: 2px;
+                background-color: #FDF8F4;
+            }
+        }
+    }
+}
+
+// === / header
+// --- footer
+.services {
+    padding: 50px 0;
+    background: rgba(117, 90, 90, 0.8);
+    overflow: hidden;
+    .bg_image {
+        position: absolute;
+        bottom: -268px;
+        right: 77px;
+        transform: rotate(159deg) scale(0.7);
+    }
+    .services_title {
+        font-weight: 500;
+        font-size: 24px;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+    }
+    .services_list a,
+    .bottom_text {
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .services_list {
+        li+li {
+            margin-top: 15px;
+        }
+    }
+    .logo {
+        line-height: 1;
+        font-family: 'Book Antiqua';
+        font-weight: bold;
+        font-size: 50px;
+        text-align: right;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 35px;
+    }
+    .bottom_text {
+        text-align: right;
+    }
+}
+
+// === / footer

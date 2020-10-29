@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="description description description description description description">
 
     <title>Site name</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -18,41 +17,54 @@
     <!-- header -->
     <header id="header" class="header">
         <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col">
+            <div class="row mt-4 mt-sm-0 justify-content-sm-between align-items-lg-center">
+                <div class="col-3 d-none d-sm-block">
                     <div class="logo">
                         JIVA
                     </div>
                 </div>
-                <div class="col-6">
+
+                <div class="col-sm-6 order-1">
                     <ul class="menu">
                         <li class="menu_item">
-                            <a href="#" class="nav_link">
+                            <a href="index.html" class="nav_link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="pages/massage.html" class="nav_link">
                                 Массаж
                             </a>
                         </li>
                         <li class="menu_item">
-                            <a href="#" class="nav_link">
+                            <a href="pages/spa.html" class="nav_link">
                                 SPA
                             </a>
                         </li>
                         <li class="menu_item">
-                            <a href="#" class="nav_link">
+                            <a href="#offer" class="nav_link">
                                 Акция
                             </a>
                         </li>
                         <li class="menu_item">
-                            <a href="#" class="nav_link">
+                            <a href="#contacts" class="nav_link">
                                 Контакты
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="col text-right">
+                <div class="col-6 col-sm-3 text-sm-right mt-2 mt-sm-0 order-xl-2">
                     <div class="phone_numbers">
                         <a href="tel:+">38 099 666 14 88</a>
                         <a href="tel:+">38 099 666 14 88</a>
-                        <a href="tel:+">38 099 666 14 88</a>
+                    </div>
+                </div>
+
+                <div class="col-6 d-sm-none text-right mt-2">
+                    <div id="toggle_button" class="toggle_button">
+                        <div class="button_item item_top"></div>
+                        <div class="button_item item_mid"></div>
+                        <div class="button_item item_bot"></div>
                     </div>
                 </div>
             </div>
@@ -66,7 +78,7 @@
             <img src="assets/img/intro.jpg" alt="" class="">
         </div>
         <div class="intro_wrap">
-            <img src="assets/img/bg_image.png" alt="" class="bg_image">
+            <img src="assets/img/bg_image.png" alt="" class="bg_image d-none d-sm-inline">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-10 text-center">
@@ -78,14 +90,13 @@
                     <div class="col-7 pl-0">
                         <img src="assets/img/intro_a.jpg" alt="i" class="w-100 h-100">
                     </div>
-                    <div class="col-5 pr-0">
+                    <div class="col-5 p-0 pl-sm-3">
                         <img src="assets/img/intro_b.jpg" alt="" class="w-100">
                         <img src="assets/img/intro_c.jpg" alt="" class="w-100">
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
     <!-- / intro -->
 
@@ -100,7 +111,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-7">
+                <div class="col-sm-7">
                     <div class="price_text">
                         <p>
                             В нашем салоне вы можете заказать любой из доступных видов массажа на выезд: к себе в офис, домой или гостинницу.
@@ -112,49 +123,49 @@
                 </div>
             </div>
             <div class="row massage_prices_wrap">
-                <div class="col-6">
+                <div class="col-sm-6 massage_item_wrap">
                     <div class="massage_item">
                         <div class="massage_type">«Супер фигура»</div>
                         <div class="massage_price">400грн</div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6 massage_item_wrap">
                     <div class="massage_item">
                         <div class="massage_type">«Стоп целлюлит»</div>
                         <div class="massage_price">700грн</div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6 massage_item_wrap">
                     <div class="massage_item">
                         <div class="massage_type">Фирменный «Королевский массаж»</div>
                         <div class="massage_price">700грн</div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6 massage_item_wrap">
                     <div class="massage_item">
                         <div class="massage_type">Массаж спины</div>
                         <div class="massage_price">400грн</div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6 massage_item_wrap">
                     <div class="massage_item">
                         <div class="massage_type">Классический общий массаж</div>
                         <div class="massage_price">600грн</div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6 massage_item_wrap">
                     <div class="massage_item">
                         <div class="massage_type">Антицеллюлитный массаж</div>
                         <div class="massage_price">600грн</div>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="massage_button">
-                    <a href="#" class="brand_btn">Подробнее</a>
-                </div>
+            <div class="row justify-content-center mt-4">
+                <a href="pages/massage.html" class="brand_btn brand_btn__primary">Подробнее</a>
             </div>
         </div>
+        <!-- <a href="pages/massage.html" class="brand_btn brand_btn__primary">Подробнее</a> -->
+
     </section>
     <!-- / prices -->
 
@@ -168,23 +179,23 @@
                     </div>
                 </div>
             </div>
-            <img src="assets/img/bg_image.png" alt="" class="bg_image bg_image__spa-1">
-            <div class="d-flex images_grid">
-                <div class="col-7 pl-0">
-                    <div class="img_wrap w-100 h-100">
+            <img src="assets/img/bg_image.png" alt="" class="bg_image bg_image__spa-1  d-none d-sm-inline">
+            <div class="d-sm-flex images_grid">
+                <div class="col-sm-7 p-0 pr-sm-3">
+                    <a href="pages/spa.html#body_wrapping" class="img_wrap w-100 h-100">
                         <img src="assets/img/body_wrapping.jpg" alt="i" class="w-100 h-100">
                         <div class="img_title">SPA-обертывание </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-5 pr-0">
-                    <div class="img_wrap">
+                <div class="col-sm-5 p-0 pl-sm-3">
+                    <a href="pages/spa.html#body_wrapping_gel" class="img_wrap mt-4 mt-sm-0">
                         <img src="assets/img/body_wrapping_gel.jpg" alt="" class="w-100">
                         <div class="img_title">Обертывание Styx cello gel</div>
-                    </div>
-                    <div class="img_wrap">
+                    </a>
+                    <a href="pages/spa.html#paradise_pleasure" class="img_wrap">
                         <img src="assets/img/paradise_pleasure.jpg" alt="" class="w-100">
                         <div class="img_title">SPA-программа "Райское наслаждение"</div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <img src="assets/img/bg_image.png" alt="" class="bg_image bg_image__spa-2">
@@ -194,28 +205,297 @@
 
     <!-- reasons -->
     <section id="reasons" class="section_reasons">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section_title">
+                        Причины почему стоит делать массаж
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="reason_item mt-0">
+                        <div class="reason_icon">
+                            <img src="assets/img/svg/reasons/icon-1.svg" alt="i">
+                        </div>
+                        <div class="reason_title">
+                            Здоровье организма
+                        </div>
+                        <div class="reason_description">
+                            Нормализация обмена веществ, улучшения кровообращения, ускорение лимфотока, выведение токсинов
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="reason_item mt-0">
+                        <div class="reason_icon">
+                            <img src="assets/img/svg/reasons/icon-2.svg" alt="i">
+                        </div>
+                        <div class="reason_title">
+                            Это фитнесс
+                        </div>
+                        <div class="reason_description">
+                            Массаж- это безопасная и разносторонняя нагрузка на мышцы , которая сопоставима с тренировками
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="reason_item mt-lg-0">
+                        <div class="reason_icon">
+                            <img src="assets/img/svg/reasons/icon-3.svg" alt="i">
+                        </div>
+                        <div class="reason_title">
+                            Глубокая релаксация
+                        </div>
+                        <div class="reason_description">
+                            Массаж дает возможность отвлечься проблем, отдохнуть и наполниться силами и жизненной энергией
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="reason_item">
+                        <div class="reason_icon">
+                            <img src="assets/img/svg/reasons/icon-5.svg" alt="i">
+                        </div>
+                        <div class="reason_title">
+                            Омоложение организма
+                        </div>
+                        <div class="reason_description">
+                            Улучшение обменных процессов дает отличный омолаживающий эффект, ЭТО дешевле любого косметолога
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="reason_item">
+                        <div class="reason_icon">
+                            <img src="assets/img/svg/reasons/icon-4.svg" alt="i">
+                        </div>
+                        <div class="reason_title">
+                            Коррекция фигуры
+                        </div>
+                        <div class="reason_description">
+                            Целлюлит, проблеммы лишнего веса и другие недостатки фигуры отлично решаются при помощи массажа
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="reason_item">
+                        <div class="reason_icon">
+                            <img src="assets/img/svg/reasons/icon-6.svg" alt="i">
+                        </div>
+                        <div class="reason_title">
+                            Пробуждение энергии
+                        </div>
+                        <div class="reason_description">
+                            Массаж наполняет тело силами и энергией, дает ощущение легкости и гармоничного понимания своего тела
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- / reasons -->
 
-    <!-- advantages -->
-    <section id="advantages" class="section_advantages">
-    </section>
-    <!-- / advantages -->
-
     <!-- special_offer -->
-    <section id="special_offer" class="section_special_offer">
+    <section id="offer" class="section_special_offer">
+        <div class="container position-relative">
+            <img src="assets/img/bg_image.png" alt="" class="bg_image">
+
+            <div class="row">
+                <div class="col">
+                    <div class="section_title">
+                        Супер предложение
+                    </div>
+                </div>
+            </div>
+            <div class="image_wrap">
+                <img src="assets/img/special_offer.jpg" alt="" class="w-100">
+                <div class="image_title">
+                    <p>Королевский массаж всего <span>̶7̶0̶0̶ </span> 500грн</p>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- / special_offer -->
 
-    <!-- all_services -->
-    <section id="all_services" class="section_all_services">
+    <!-- advantages -->
+    <section id="advantages" class="section_advantages">
+        <div class="container position-relative">
+
+            <img src="assets/img/bg_image.png" alt="" class="bg_image bg_image__advantages-1">
+
+            <img src="assets/img/bg_image.png" alt="" class="bg_image bg_image__advantages-2">
+            <div class="row">
+                <div class="col">
+                    <div class="section_title">
+                        Почему мы
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col flex-grow-1 advantages_item_wrap">
+                    <div class="advantages_item">
+                        <div class="advantages_icon">
+                            <img src="assets/img/svg/advantages/icon-1.svg" alt="">
+                        </div>
+                        <div class="advantages_title">
+                            Безупречный <br> сервис
+                        </div>
+                    </div>
+                </div>
+                <div class="col flex-grow-1 advantages_item_wrap">
+                    <div class="advantages_item">
+                        <div class="advantages_icon">
+                            <img src="assets/img/svg/advantages/icon-2.svg" alt="">
+                        </div>
+                        <div class="advantages_title">
+                            32 <br> вида массажа
+                        </div>
+                    </div>
+                </div>
+                <div class="col flex-grow-1 advantages_item_wrap">
+                    <div class="advantages_item">
+                        <div class="advantages_icon">
+                            <img src="assets/img/svg/advantages/icon-3.svg" alt="">
+                        </div>
+                        <div class="advantages_title">
+                            12 <br> Cертифицированных массажистов
+                        </div>
+                    </div>
+                </div>
+                <div class="col flex-grow-1 advantages_item_wrap">
+                    <div class="advantages_item">
+                        <div class="advantages_icon">
+                            <img src="assets/img/svg/advantages/icon-4.svg" alt="">
+                        </div>
+                        <div class="advantages_title">
+                            Более 5000 <br> довольных клиентов
+                        </div>
+                    </div>
+                </div>
+                <div class="col flex-grow-1 advantages_item_wrap">
+                    <div class="advantages_item">
+                        <div class="advantages_icon">
+                            <img src="assets/img/svg/advantages/icon-5.svg" alt="">
+                        </div>
+                        <div class="advantages_title">
+                            7 <br> лет опыта
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- / all_services -->
+    <!-- / advantages -->
+
+    <!-- contacts -->
+    <section id="contacts" class="section_contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section_title">
+                        Контакты
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-5 col-xl-4">
+                    <ul class="contacts_wrap">
+                        <li>
+                            <a href="tel:+"><img src="assets/img/svg/phone.svg" alt="" class="mr-3">+38095-464-52-24</a>
+                        </li>
+                        <li>
+                            <a href="tel:+"><img src="assets/img/svg/phone.svg" alt="" class="mr-3">+38095-464-00-24</a>
+                        </li>
+                        <li>
+                            <a href="mailto:"><img src="assets/img/svg/mail.svg" alt="" class="mr-3">jiva@gmail.com</a>
+                        </li>
+                        <li>
+                            <a href="http://"><img src="assets/img/svg/map.svg" alt="" class="mr-3">Киев. улица Григоренка 25, каб 55</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-5 col-xl-4 d-flex align-items-center justify-content-center mt-5 mt-sm-0">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="brand_btn brand_btn__primary" data-toggle="modal" data-target="#exampleModal">
+                        Обратный звонок
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title service_item_title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form action="" id="ajax_form" class="form">
+                                    <div class="modal-body">
+                                        Что бы заказать <span class="massage_name"></span> заполните форму ниже:
+                                        <input type="text" class="input" name="name" placeholder="Имя" required>
+                                        <input type="tel" class="input" name="tel" placeholder="Телефон" required>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="brand_btn brand_btn__secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="brand_btn brand_btn__primary">Save changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / contacts -->
 
     <!-- footer -->
-    <footer id="contacts" class="footer">
+    <footer id="" class="services">
+        <div class="container position-relative">
+            <img src="assets/img/bg_image.png" alt="" class="bg_image">
+            <div class="row justify-content-around justify-content-lg-between">
+                <div class="col-5 col-lg-4 col-xl-3 d-none d-sm-block">
+                    <div class="services_title">
+                        Услуги спа
+                    </div>
+                    <ul class="services_list">
+                        <li><a href="pages/spa.html#body_wrapping">Обертывание Algologie</a></li>
+                        <li><a href="pages/spa.html#body_wrapping_gel">Обертывание Styx cello gel</a></li>
+                        <li><a href="pages/spa.html#paradise_pleasure">Обертывание Styx Aromaderm</a></li>
+                    </ul>
+                </div>
+                <div class="col-5 col-lg-4 col-xl-3 d-none d-sm-block">
+                    <div class="services_title">
+                        Услуги массажа
+                    </div>
+                    <ul class="services_list">
+                        <li><a href="pages/massage.html#massage_services-1">«Супер фигура»</a></li>
+                        <li><a href="pages/massage.html#massage_services-2">«Стоп целлюлит»</a></li>
+                        <li><a href="pages/massage.html#massage_services-3">«Королевский массаж»</a></li>
+                        <li><a href="pages/massage.html#massage_services-4">Массаж спины</a></li>
+                        <li><a href="pages/massage.html#massage_services-5">Классический общий массаж</a></li>
+                        <li><a href="pages/massage.html#massage_services-6">Антицеллюлитный массаж</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-lg-4 col-xl-3 d-block d-sm-none d-lg-block">
+                    <div class="logo">
+                        Jiva
+                    </div>
+                    <div class="bottom_text">
+                        Позвольте нам позаботиться о релаксации и восстановлении сил.
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </footer>
     <!-- / footer -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
