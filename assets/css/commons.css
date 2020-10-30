@@ -25,6 +25,10 @@
       .body .container {
         padding-left: 30px;
         padding-right: 30px; } }
+    @media (max-width: 575px) {
+      .body .container {
+        padding-left: 20px;
+        padding-right: 20px; } }
   .body .phone_numbers {
     position: relative;
     z-index: 3; }
@@ -80,9 +84,12 @@
     font-weight: 300;
     color: rgba(0, 0, 0, 0.8);
     text-align: center; }
+    @media (max-width: 575px) {
+      .body .promo_text {
+        font-size: 20px; } }
   .body .form .input {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
     filter: drop-shadow(4px 4px 10px rgba(149, 113, 104, 0.2));
     border-radius: 5px;
     background-color: #fff;
@@ -93,12 +100,24 @@
     font-weight: 300;
     font-size: 30px;
     color: #1D1B1B; }
-  .body .modal-header {
+  .body .modal-content .service_item_title {
+    font-size: 24px; }
+  .body .modal-content .modal-header {
     padding: 1em 1.5em; }
-  .body .modal-body {
+    .body .modal-content .modal-header .close span {
+      font-size: 2rem; }
+    .body .modal-content .modal-header .service_item_title {
+      font-weight: 500; }
+  .body .modal-content .modal-body {
+    padding: 1em 1.5em 1.5em; }
+  .body .modal-content .modal-footer {
     padding: 1em 1.5em; }
-  .body .modal-footer {
-    padding: 1em 1.5em; }
+  @media (max-width: 575px) {
+    .body .modal-content .modal-header {
+      padding: 1em; }
+    .body .modal-content .modal-body,
+    .body .modal-content .modal-footer {
+      font-size: 16px; } }
   .body.menu_show {
     overflow: hidden; }
     .body.menu_show .toggle_button .button_item {
@@ -106,6 +125,8 @@
     .body.menu_show .menu {
       opacity: 1;
       visibility: visible; }
+      .body.menu_show .menu li {
+        transform: translateY(50px); }
     .body.menu_show .phone_numbers a {
       color: rgba(0, 0, 0, 0.8); }
 
@@ -131,13 +152,16 @@ section {
     color: #FDF8F4; }
   .header .menu {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    transition: .5s; }
+    .header .menu li {
+      transition: .5s; }
     .header .menu li + li {
       margin-left: 40px; }
     .header .menu .menu_item a {
       font-weight: 300;
       font-size: 24px; }
-  @media (max-width: 991px) {
+  @media (max-width: 1199px) {
     .header .menu {
       display: flex;
       flex-direction: column;
@@ -157,7 +181,7 @@ section {
         left: 0;
         top: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: #FDF8F4;
         opacity: 0;
         visibility: hidden; }

@@ -118,13 +118,15 @@
             font-size: 24px;
             color: #000000;
         }
-        // .massage_type {
-        //     display: flex;
-        //     align-items: center;
-        // }
     }
     @media (max-width: $screen_xs_max) {
         padding-top: 100px;
+        .massage_prices_wrap .massage_item {
+            font-size: 20px;
+        }
+        .price_text {
+            text-align: left;
+        }
     }
 }
 
@@ -166,6 +168,7 @@
                 top: 0;
                 left: 0;
                 background-color: rgba($color: #000000, $alpha: 0.6);
+                transition: .3s;
             }
             .img_title {
                 position: absolute;
@@ -178,7 +181,17 @@
                 justify-content: center;
                 font-size: 30px;
                 text-align: center;
+                transition: .3s;
                 color: #FFFFFF;
+            }
+            &:hover {
+                &::after {
+                    background-color: rgba($color: #000000, $alpha: 0.3);
+                }
+                .img_title {
+                    // font-size: 34px;
+                    transform: scale(1.1);
+                }
             }
         }
     }
@@ -226,7 +239,7 @@
             margin-bottom: 25px;
         }
     }
-    @media (max-width: $screen_lg_max) {
+    @media (min-width: $screen_sm) and (max-width: $screen_lg_max) {
         .reason_title {
             height: 90px;
             display: flex;
@@ -245,6 +258,8 @@
     }
     .image_wrap {
         position: relative;
+        display: inline-block;
+        cursor: pointer;
         &::after {
             content: "";
             position: absolute;
@@ -254,6 +269,7 @@
             width: 100%;
             height: 100%;
             background-color: rgba($color: #000000, $alpha: 0.6);
+            transition: .3s;
         }
         .image_title {
             position: absolute;
@@ -267,8 +283,18 @@
             justify-content: center;
             font-size: 36px;
             color: #FFFFFF;
+            transition: .3s;
             span {
                 margin: 0 15px;
+            }
+        }
+        &:hover {
+            &::after {
+                background-color: rgba($color: #000000, $alpha: 0.3);
+            }
+            .image_title {
+                // font-size: 34px;
+                transform: scale(1.1);
             }
         }
     }

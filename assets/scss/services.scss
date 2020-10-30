@@ -5,6 +5,10 @@
 section {
     padding-top: 150px;
     padding-bottom: 150px;
+    @media (max-width: $screen_xs_max) {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
 }
 
 p {
@@ -12,6 +16,9 @@ p {
     font-size: 23px;
     text-align: center;
     color: rgba(0, 0, 0, 0.8);
+    @media (max-width: $screen_xs_max) {
+        font-size: 20px;
+    }
 }
 
 .body .intro_title {
@@ -21,6 +28,7 @@ p {
 .section_intro {
     padding: 0;
     position: relative;
+    overflow: hidden;
     .intro_title {
         font-size: 48px;
     }
@@ -34,6 +42,12 @@ p {
         display: flex;
         align-items: center;
     }
+    @media (max-width: $screen_xs_max) {
+        .intro_title {
+            font-size: 34px;
+            margin-top: 306px;
+        }
+    }
 }
 
 // === / section_intro
@@ -45,9 +59,82 @@ p {
         left: -300px;
         transform: rotate(-75deg) scale(0.6);
     }
+    @media (max-width: $screen_xs_max) {
+        .preview_text {
+            text-align: left;
+        }
+    }
 }
 
 // === / section_promo
+// --- section_special_offer
+.section_special_offer {
+    padding-top: 0;
+    .bg_image {
+        position: absolute;
+        top: -300px;
+        left: -380px;
+        transform: rotate(139deg) scale(0.38);
+    }
+    .image_wrap {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+        }
+        .image_title {
+            position: absolute;
+            overflow: hidden;
+            z-index: 2;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            p {
+                color: #fff;
+                font-size: 36px;
+                font-weight: 500;
+            }
+            span {
+                margin: 0 15px;
+            }
+        }
+    }
+    @media (max-width: $screen_md_max) {
+        .bg_image {
+            position: absolute;
+            top: -494px;
+            left: -134px;
+            transform: rotate(-26deg) scale(0.28);
+        }
+        .image_wrap .image_title p {
+            font-size: 28px;
+        }
+    }
+    @media (max-width: $screen_xs_max) {
+        .image_wrap .image_title p {
+            font-size: 20px;
+        }
+        .image_wrap .image_title {
+            left: 50%;
+            margin-left: -125px;
+            text-align: center;
+            max-width: 250px;
+            font-size: 24px;
+        }
+    }
+}
+
+// === / section_special_offer
 // --- section_services_massage
 .section_services_massage {
     padding: 0;
@@ -57,7 +144,6 @@ p {
     .massage_item_inner {
         position: relative;
         display: flex;
-        align-items: center;
     }
     .massage_item {
         position: relative;
@@ -107,34 +193,94 @@ p {
             transform: rotate(187deg) scale(0.37);
         }
     }
+    @media (min-width: $screen_xl) {
+        .massage_item_inner {
+            align-items: center;
+        }
+    }
+    @media (max-width: $screen_lg_max) {
+        .massage_item_wrap {
+            padding-bottom: 100px;
+        }
+    }
+    @media (max-width: $screen_xs_max) {
+        .massage_item_wrap {
+            position: relative;
+            .image_wrap {
+                padding: 0;
+            }
+            &.row_reverse {
+                flex-direction: column-reverse;
+            }
+        }
+        .massage_item {
+            margin-top: 30px;
+            li {
+                font-size: 16px;
+            }
+        }
+        .service_item_title {
+            position: absolute;
+            top: -112px;
+            left: 0px;
+            font-size: 26px;
+            color: #fff;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+        .image_wrap {
+            padding-top: 20px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                // background-color: rgba(0, 0, 0, 0.6);
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37298669467787116) 68%, rgba(0, 0, 0, 0.8575805322128851) 100%);
+            }
+        }
+    }
 }
 
 // === / section_services_massage
 // --- section_promo
 .section_promo {
+    // padding-top: 0;
     .promo_text {
         position: relative;
-        &::before {
-            position: absolute;
-            top: -55px;
-            left: -20px;
-            content: "";
-            display: inline-block;
-            width: 64px;
-            height: 64px;
-            background: url(../img/svg/quotes-start.svg) no-repeat 0 0;
-            background-size: 100%;
+    }
+    @media (min-width: $screen_sm) {
+        .promo_text {
+            &::before {
+                position: absolute;
+                top: -55px;
+                left: -20px;
+                content: "";
+                display: inline-block;
+                width: 64px;
+                height: 64px;
+                background: url(../img/svg/quotes-start.svg) no-repeat 0 0;
+                background-size: 100%;
+            }
+            &::after {
+                position: absolute;
+                bottom: -35px;
+                right: -60px;
+                content: "";
+                display: inline-block;
+                width: 64px;
+                height: 64px;
+                background: url(../img/svg/quotes-finish.svg) no-repeat 0 0;
+                background-size: 100%;
+            }
         }
-        &::after {
-            position: absolute;
-            bottom: -35px;
-            right: -60px;
-            content: "";
-            display: inline-block;
-            width: 64px;
-            height: 64px;
-            background: url(../img/svg/quotes-finish.svg) no-repeat 0 0;
-            background-size: 100%;
+    }
+    @media (max-width: $screen_xs_max) {
+        .promo_text {
+            text-align: left;
         }
     }
 }

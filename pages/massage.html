@@ -18,11 +18,11 @@
     <!-- header -->
     <header id="header" class="header">
         <div class="container">
-            <div class="row mt-4 mt-sm-0 justify-content-sm-between align-items-lg-center">
-                <div class="col-3 d-none d-sm-block">
-                    <div class="logo">
+            <div class="row mt-4 mt-sm-0 justify-content-sm-between align-items-xl-center">
+                <div class="col-2 col-xl-3 d-none d-sm-block">
+                    <a href="/index.html" class="logo">
                         JIVA
-                    </div>
+                    </a>
                 </div>
                 <div class="col-sm-6 order-1">
                     <ul class="menu">
@@ -42,7 +42,7 @@
                             </a>
                         </li>
                         <li class="menu_item">
-                            <a href="/index.html #offer" class="nav_link">
+                            <a href="/index.html#offer" class="nav_link">
                                 Акция
                             </a>
                         </li>
@@ -71,14 +71,15 @@
     </header>
     <!-- header -->
     <!-- intro -->
-    <section id="intro" class="section_intro">
+    <section id="intro" class="section_intro overflow-hidden">
         <div class="image_wrap">
-            <img src="../assets/img/massage_intro.jpg" alt="" class="">
+            <img src="../assets/img/massage_intro.jpg" alt="" class="d-none d-sm-inline">
+            <img src="../assets/img/massage_intro-mob.jpg" alt="" class="d-sm-none">
         </div>
         <div class="intro_wrap">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-8 text-center">
+                <div class="row justify-content-xl-center">
+                    <div class="col-sm-8 text-xl-center">
                         <div class="intro_title">
                             Массаж который приносит результат
                         </div>
@@ -94,7 +95,7 @@
         <div class="container position-relative">
             <img src="../assets/img/bg_image.png" alt="" class="bg_image d-none d-sm-inline">
             <div class="row justify-content-center">
-                <div class="col-10">
+                <div class="col-lg-10">
                     <p class="preview_text">
                         Комфортная обстановка, приятная музыка, индивидуальный подход, исключитель ная стерильность и довольные клиенты – то, без чего не проходит ни один день в салоне
                     </p>
@@ -103,11 +104,12 @@
         </div>
     </section>
     <!-- / section_preview -->
+
     <!-- section_services_massage -->
     <section id="massage" class="section_services_massage">
         <div class="container">
-            <div id="massage_services-1" class="row justify-content-xl-end massage_item_wrap">
-                <div class="col-sm-5 massage_item_inner">
+            <div id="massage_services-1" class="row justify-content-xl-end massage_item_wrap row_reverse">
+                <div class="col-sm-6 col-xl-5 massage_item_inner">
                     <div class="massage_item">
                         <div class="service_item_title">
                             «Супер фигура»
@@ -123,17 +125,17 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 image_wrap">
                     <img src="../assets/img/massage_services/massage_services-1.jpg" alt="" class="w-100">
                 </div>
             </div>
             <div id="massage_services-2" class="row justify-content-between massage_item_wrap position-relative">
                 <img src="../assets/img/bg_image.png" alt="" class="bg_image bg_image__massage-1 d-none d-sm-inline">
 
-                <div class="col-sm-6">
+                <div class="col-sm-6 image_wrap">
                     <img src="../assets/img/massage_services/massage_services-2.jpg" alt="" class="w-100">
                 </div>
-                <div class="col-sm-5 massage_item_inner">
+                <div class="col-sm-6 col-xl-5 massage_item_inner">
                     <div class="massage_item">
                         <div class="service_item_title">
                             «Стоп целлюлит»
@@ -152,8 +154,8 @@
                     </div>
                 </div>
             </div>
-            <div id="massage_services-3" class="row justify-content-end massage_item_wrap">
-                <div class="col-sm-5 massage_item_inner">
+            <div id="massage_services-3" class="row justify-content-end massage_item_wrap row_reverse">
+                <div class="col-sm-6 col-xl-5 massage_item_inner">
                     <div class="massage_item">
                         <div class="service_item_title">
                             «Королевский массаж»
@@ -164,7 +166,7 @@
                             <li>массажных техник</li>
                             <li>устраняет стресс и хроническую усталость</li>
                             <li>повышает жизненный тонус и придаёт энергию</li>
-                            <li>60 минут - 700грн</li>
+                            <li>60 минут - <span class="px-2">̶7̶0̶0̶ </span> 500грн</li>
                         </ul>
                         <button type="button" class="brand_btn brand_btn__primary massage_button" data-toggle="modal" data-target="#exampleModal">
                             Заказать
@@ -173,15 +175,15 @@
                     <img src="../assets/img/bg_image.png" alt="" class="bg_image bg_image__massage-2 d-none d-sm-inline">
 
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 image_wrap">
                     <img src="../assets/img/massage_services/massage_services-3.jpg" alt="" class="w-100">
                 </div>
             </div>
             <div id="massage_services-4" class="row justify-content-between massage_item_wrap">
-                <div class="col-sm-6">
+                <div class="col-sm-6 image_wrap">
                     <img src="../assets/img/massage_services/massage_services-4.jpg" alt="" class="w-100">
                 </div>
-                <div class="col-sm-5 massage_item_inner">
+                <div class="col-sm-6 col-xl-5 massage_item_inner">
                     <div class="massage_item">
                         <div class="service_item_title">
                             «Массаж спины»
@@ -201,8 +203,8 @@
                     </div>
                 </div>
             </div>
-            <div id="massage_services-5" class="row justify-content-end massage_item_wrap">
-                <div class="col-sm-5 massage_item_inner">
+            <div id="massage_services-5" class="row justify-content-end massage_item_wrap row_reverse">
+                <div class="col-sm-6 col-xl-5 massage_item_inner">
                     <div class="massage_item">
                         <div class="service_item_title">
                             «Классический общий массаж»
@@ -222,15 +224,15 @@
                     <img src="../assets/img/bg_image.png" alt="" class="bg_image bg_image__massage-3 d-none d-sm-inline">
 
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 image_wrap">
                     <img src="../assets/img/massage_services/massage_services-5.jpg" alt="" class="w-100">
                 </div>
             </div>
             <div id="massage_services-6" class="row justify-content-between massage_item_wrap pb-0">
-                <div class="col-sm-6">
+                <div class="col-sm-6 image_wrap">
                     <img src="../assets/img/massage_services/massage_services-6.jpg" alt="" class="w-100">
                 </div>
-                <div class="col-sm-5 massage_item_inner">
+                <div class="col-sm-6 col-xl-5 massage_item_inner">
                     <div class="massage_item">
                         <div class="service_item_title">
                             «Антицеллюлитный массаж»
@@ -266,7 +268,8 @@
                 </div>
                 <form action="" id="ajax_form" class="form">
                     <div class="modal-body">
-                        Что бы заказать <span class="massage_name"></span> заполните форму ниже:
+                        <p> Что бы заказать <span class="massage_name"></span> заполните форму ниже:
+                        </p>
                         <input type="text" class="input" name="name" placeholder="Имя" required>
                         <input type="tel" class="input" name="tel" placeholder="Телефон" required>
                     </div>
@@ -283,7 +286,7 @@
     <section class="section_promo">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-10">
+                <div class="col-sm-10">
                     <p class="promo_text">
                         Массаж в Киеве – это не только корректировка фигуры или лечение боли в спине, это идеальный помощник борьбы со стрессом после тяжелого рабочего дня или физических нагрузок. Положительно влияет на здоровье и на деятельность всех физиологических систем
                         организма человека. Массаж – это комплексный подход к здоровью и требованию Вашего организма. Мы разрабатываем собственные методики под нужды клиента, так как не для всех популярные виды массажа одинаково полезны и доступны по
@@ -305,9 +308,9 @@
                         Услуги спа
                     </div>
                     <ul class="services_list">
-                        <li><a href="pages/spa.html#body_wrapping">Обертывание Algologie</a></li>
-                        <li><a href="pages/spa.html#body_wrapping_gel">Обертывание Styx cello gel</a></li>
-                        <li><a href="pages/spa.html#paradise_pleasure">Обертывание Styx Aromaderm</a></li>
+                        <li><a href="/pages/spa.html#body_wrapping">Обертывание Algologie</a></li>
+                        <li><a href="/pages/spa.html#body_wrapping_gel">Обертывание Styx cello gel</a></li>
+                        <li><a href="/pages/spa.html#paradise_pleasure">Обертывание Styx Aromaderm</a></li>
                     </ul>
                 </div>
                 <div class="col-5 col-lg-4 col-xl-3 d-none d-sm-block">
@@ -315,19 +318,19 @@
                         Услуги массажа
                     </div>
                     <ul class="services_list">
-                        <li><a href="pages/massage.html#massage_services-1">«Супер фигура»</a></li>
-                        <li><a href="pages/massage.html#massage_services-2">«Стоп целлюлит»</a></li>
-                        <li><a href="pages/massage.html#massage_services-3">«Королевский массаж»</a></li>
-                        <li><a href="pages/massage.html#massage_services-4">Массаж спины</a></li>
-                        <li><a href="pages/massage.html#massage_services-5">Классический общий массаж</a></li>
-                        <li><a href="pages/massage.html#massage_services-6">Антицеллюлитный массаж</a></li>
+                        <li><a href="/pages/massage.html#massage_services-1">«Супер фигура»</a></li>
+                        <li><a href="/pages/massage.html#massage_services-2">«Стоп целлюлит»</a></li>
+                        <li><a href="/pages/massage.html#massage_services-3">«Королевский массаж»</a></li>
+                        <li><a href="/pages/massage.html#massage_services-4">Массаж спины</a></li>
+                        <li><a href="/pages/massage.html#massage_services-5">Классический общий массаж</a></li>
+                        <li><a href="/pages/massage.html#massage_services-6">Антицеллюлитный массаж</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4 col-lg-4 col-xl-3 d-block d-sm-none d-lg-block">
-                    <div class="logo">
+                <div class="col-sm-4 col-lg-4 col-xl-3 d-block d-sm-none d-lg-block  text-right ">
+                    <a href="/index.html" class="logo">
                         Jiva
-                    </div>
-                    <div class="bottom_text">
+                    </a>
+                    <div class="bottom_text mt-3">
                         Позвольте нам позаботиться о релаксации и восстановлении сил.
                     </div>
                 </div>

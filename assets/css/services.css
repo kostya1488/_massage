@@ -25,6 +25,10 @@
       .body .container {
         padding-left: 30px;
         padding-right: 30px; } }
+    @media (max-width: 575px) {
+      .body .container {
+        padding-left: 20px;
+        padding-right: 20px; } }
   .body .phone_numbers {
     position: relative;
     z-index: 3; }
@@ -80,9 +84,12 @@
     font-weight: 300;
     color: rgba(0, 0, 0, 0.8);
     text-align: center; }
+    @media (max-width: 575px) {
+      .body .promo_text {
+        font-size: 20px; } }
   .body .form .input {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
     filter: drop-shadow(4px 4px 10px rgba(149, 113, 104, 0.2));
     border-radius: 5px;
     background-color: #fff;
@@ -93,12 +100,24 @@
     font-weight: 300;
     font-size: 30px;
     color: #1D1B1B; }
-  .body .modal-header {
+  .body .modal-content .service_item_title {
+    font-size: 24px; }
+  .body .modal-content .modal-header {
     padding: 1em 1.5em; }
-  .body .modal-body {
+    .body .modal-content .modal-header .close span {
+      font-size: 2rem; }
+    .body .modal-content .modal-header .service_item_title {
+      font-weight: 500; }
+  .body .modal-content .modal-body {
+    padding: 1em 1.5em 1.5em; }
+  .body .modal-content .modal-footer {
     padding: 1em 1.5em; }
-  .body .modal-footer {
-    padding: 1em 1.5em; }
+  @media (max-width: 575px) {
+    .body .modal-content .modal-header {
+      padding: 1em; }
+    .body .modal-content .modal-body,
+    .body .modal-content .modal-footer {
+      font-size: 16px; } }
   .body.menu_show {
     overflow: hidden; }
     .body.menu_show .toggle_button .button_item {
@@ -106,6 +125,8 @@
     .body.menu_show .menu {
       opacity: 1;
       visibility: visible; }
+      .body.menu_show .menu li {
+        transform: translateY(50px); }
     .body.menu_show .phone_numbers a {
       color: rgba(0, 0, 0, 0.8); }
 
@@ -131,13 +152,16 @@ section {
     color: #FDF8F4; }
   .header .menu {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    transition: .5s; }
+    .header .menu li {
+      transition: .5s; }
     .header .menu li + li {
       margin-left: 40px; }
     .header .menu .menu_item a {
       font-weight: 300;
       font-size: 24px; }
-  @media (max-width: 991px) {
+  @media (max-width: 1199px) {
     .header .menu {
       display: flex;
       flex-direction: column;
@@ -157,7 +181,7 @@ section {
         left: 0;
         top: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: #FDF8F4;
         opacity: 0;
         visibility: hidden; }
@@ -228,19 +252,27 @@ section {
 section {
   padding-top: 150px;
   padding-bottom: 150px; }
+  @media (max-width: 575px) {
+    section {
+      padding-top: 75px;
+      padding-bottom: 75px; } }
 
 p {
   font-weight: 300;
   font-size: 23px;
   text-align: center;
   color: rgba(0, 0, 0, 0.8); }
+  @media (max-width: 575px) {
+    p {
+      font-size: 20px; } }
 
 .body .intro_title {
   margin-top: 100px; }
 
 .section_intro {
   padding: 0;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .section_intro .intro_title {
     font-size: 48px; }
   .section_intro .intro_wrap {
@@ -252,6 +284,10 @@ p {
     height: 100%;
     display: flex;
     align-items: center; }
+  @media (max-width: 575px) {
+    .section_intro .intro_title {
+      font-size: 34px;
+      margin-top: 306px; } }
 
 .section_preview .bg_image {
   position: absolute;
@@ -259,14 +295,70 @@ p {
   left: -300px;
   transform: rotate(-75deg) scale(0.6); }
 
+@media (max-width: 575px) {
+  .section_preview .preview_text {
+    text-align: left; } }
+
+.section_special_offer {
+  padding-top: 0; }
+  .section_special_offer .bg_image {
+    position: absolute;
+    top: -300px;
+    left: -380px;
+    transform: rotate(139deg) scale(0.38); }
+  .section_special_offer .image_wrap {
+    position: relative; }
+    .section_special_offer .image_wrap::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); }
+    .section_special_offer .image_wrap .image_title {
+      position: absolute;
+      overflow: hidden;
+      z-index: 2;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px; }
+      .section_special_offer .image_wrap .image_title p {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 500; }
+      .section_special_offer .image_wrap .image_title span {
+        margin: 0 15px; }
+  @media (max-width: 991px) {
+    .section_special_offer .bg_image {
+      position: absolute;
+      top: -494px;
+      left: -134px;
+      transform: rotate(-26deg) scale(0.28); }
+    .section_special_offer .image_wrap .image_title p {
+      font-size: 28px; } }
+  @media (max-width: 575px) {
+    .section_special_offer .image_wrap .image_title p {
+      font-size: 20px; }
+    .section_special_offer .image_wrap .image_title {
+      left: 50%;
+      margin-left: -125px;
+      text-align: center;
+      max-width: 250px;
+      font-size: 24px; } }
+
 .section_services_massage {
   padding: 0; }
   .section_services_massage .massage_item_wrap {
     padding-bottom: 30px; }
   .section_services_massage .massage_item_inner {
     position: relative;
-    display: flex;
-    align-items: center; }
+    display: flex; }
   .section_services_massage .massage_item {
     position: relative;
     z-index: 3; }
@@ -303,9 +395,47 @@ p {
       bottom: -182px;
       right: 0px;
       transform: rotate(187deg) scale(0.37); }
+  @media (min-width: 1200px) {
+    .section_services_massage .massage_item_inner {
+      align-items: center; } }
+  @media (max-width: 1199px) {
+    .section_services_massage .massage_item_wrap {
+      padding-bottom: 100px; } }
+  @media (max-width: 575px) {
+    .section_services_massage .massage_item_wrap {
+      position: relative; }
+      .section_services_massage .massage_item_wrap .image_wrap {
+        padding: 0; }
+      .section_services_massage .massage_item_wrap.row_reverse {
+        flex-direction: column-reverse; }
+    .section_services_massage .massage_item {
+      margin-top: 30px; }
+      .section_services_massage .massage_item li {
+        font-size: 16px; }
+    .section_services_massage .service_item_title {
+      position: absolute;
+      top: -112px;
+      left: 0px;
+      font-size: 26px;
+      color: #fff;
+      font-weight: 500;
+      line-height: 1.2; }
+    .section_services_massage .image_wrap {
+      padding-top: 20px;
+      position: relative; }
+      .section_services_massage .image_wrap::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.372987) 68%, rgba(0, 0, 0, 0.857581) 100%); } }
 
 .section_promo .promo_text {
   position: relative; }
+
+@media (min-width: 576px) {
   .section_promo .promo_text::before {
     position: absolute;
     top: -55px;
@@ -325,4 +455,8 @@ p {
     width: 64px;
     height: 64px;
     background: url(../img/svg/quotes-finish.svg) no-repeat 0 0;
-    background-size: 100%; }
+    background-size: 100%; } }
+
+@media (max-width: 575px) {
+  .section_promo .promo_text {
+    text-align: left; } }
