@@ -14,8 +14,8 @@ section {
 p {
     font-weight: 300;
     font-size: 23px;
-    text-align: center;
     color: rgba(0, 0, 0, 0.8);
+    text-align: center;
     @media (max-width: $screen_xs_max) {
         font-size: 20px;
     }
@@ -67,89 +67,44 @@ p {
 }
 
 // === / section_promo
-// --- section_special_offer
-.section_special_offer {
-    padding-top: 0;
-    .bg_image {
-        position: absolute;
-        top: -300px;
-        left: -380px;
-        transform: rotate(139deg) scale(0.38);
+// --- section_services_massage
+.section_services_massage {
+    padding: 0;
+    .massage_item_wrap {
+        padding-bottom: 60px;
+    }
+    .massage_item_inner {
+        position: relative;
+        display: flex;
     }
     .image_wrap {
         position: relative;
         &::after {
             content: "";
             position: absolute;
-            z-index: 1;
-            top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba($color: #000000, $alpha: 0.5);
-        }
-        .image_title {
-            position: absolute;
-            overflow: hidden;
-            z-index: 2;
             top: 0;
             width: 100%;
             height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            p {
-                color: #fff;
-                font-size: 36px;
-                font-weight: 500;
-            }
-            span {
-                margin: 0 15px;
-            }
+            background-color: rgba(#000, 0.3);
         }
-    }
-    @media (max-width: $screen_md_max) {
-        .bg_image {
+        .sale {
             position: absolute;
-            top: -494px;
-            left: -134px;
-            transform: rotate(-26deg) scale(0.28);
+            z-index: 2;
+            top: -32px;
+            left: -97px;
         }
-        .image_wrap .image_title p {
-            font-size: 28px;
-        }
-    }
-    @media (max-width: $screen_xs_max) {
-        .image_wrap .image_title p {
-            font-size: 20px;
-        }
-        .image_wrap .image_title {
-            left: 50%;
-            margin-left: -125px;
-            text-align: center;
-            max-width: 250px;
-            font-size: 24px;
-        }
-    }
-}
-
-// === / section_special_offer
-// --- section_services_massage
-.section_services_massage {
-    padding: 0;
-    .massage_item_wrap {
-        padding-bottom: 30px;
-    }
-    .massage_item_inner {
-        position: relative;
-        display: flex;
     }
     .massage_item {
         position: relative;
         z-index: 3;
+        padding-left: 30px;
         .service_item_title {
+            font-size: 28px;
             margin-bottom: 20px;
+        }
+        p {
+            text-align: left;
         }
         ul {
             li+li {
@@ -166,7 +121,7 @@ p {
             }
         }
         .massage_button {
-            margin-top: 30px;
+            // margin-top: 30px;
             min-width: 200px;
         }
     }
@@ -257,7 +212,7 @@ p {
             &::before {
                 position: absolute;
                 top: -55px;
-                left: -20px;
+                left: -50px;
                 content: "";
                 display: inline-block;
                 width: 64px;
@@ -267,7 +222,7 @@ p {
             }
             &::after {
                 position: absolute;
-                bottom: -35px;
+                bottom: 0px;
                 right: -60px;
                 content: "";
                 display: inline-block;

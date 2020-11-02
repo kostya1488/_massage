@@ -151,6 +151,9 @@ $screen_xl: 1200px;
         }
         .modal-body {
             padding: 1em 1.5em 1.5em;
+            p {
+                text-align: left;
+            }
         }
         .modal-footer {
             padding: 1em 1.5em;
@@ -163,6 +166,13 @@ $screen_xl: 1200px;
             .modal-footer {
                 // padding: 1em 1.5em;
                 font-size: 16px;
+                .brand_btn {
+                    margin-right: 0;
+                    margin-left: 1rem;
+                }
+                p {
+                    text-align: left;
+                }
             }
         }
     }
@@ -297,6 +307,21 @@ section {
 }
 
 // === / header
+// --- section_contacts
+.section_contacts {
+    .contacts_wrap {
+        li+li {
+            margin-top: 25px;
+        }
+        li a {
+            display: inline-flex;
+            align-items: center;
+            color: rgba(0, 0, 0, 0.9);
+        }
+    }
+}
+
+// === / section_contacts
 // --- footer
 .services {
     padding: 50px 0;
@@ -335,7 +360,7 @@ section {
         margin-bottom: 35px;
     }
     .bottom_text {
-        text-align: right;
+        // text-align: right;
     }
 }
 

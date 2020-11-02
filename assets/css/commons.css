@@ -110,6 +110,8 @@
       font-weight: 500; }
   .body .modal-content .modal-body {
     padding: 1em 1.5em 1.5em; }
+    .body .modal-content .modal-body p {
+      text-align: left; }
   .body .modal-content .modal-footer {
     padding: 1em 1.5em; }
   @media (max-width: 575px) {
@@ -117,7 +119,14 @@
       padding: 1em; }
     .body .modal-content .modal-body,
     .body .modal-content .modal-footer {
-      font-size: 16px; } }
+      font-size: 16px; }
+      .body .modal-content .modal-body .brand_btn,
+      .body .modal-content .modal-footer .brand_btn {
+        margin-right: 0;
+        margin-left: 1rem; }
+      .body .modal-content .modal-body p,
+      .body .modal-content .modal-footer p {
+        text-align: left; } }
   .body.menu_show {
     overflow: hidden; }
     .body.menu_show .toggle_button .button_item {
@@ -217,6 +226,14 @@ section {
           border-radius: 2px;
           background-color: #FDF8F4; } }
 
+.section_contacts .contacts_wrap li + li {
+  margin-top: 25px; }
+
+.section_contacts .contacts_wrap li a {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.9); }
+
 .services {
   padding: 50px 0;
   background: rgba(117, 90, 90, 0.8);
@@ -246,5 +263,3 @@ section {
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 35px; }
-  .services .bottom_text {
-    text-align: right; }
