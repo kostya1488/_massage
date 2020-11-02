@@ -131,7 +131,8 @@
     @media (max-width: $screen_xs_max) {
         padding-top: 100px;
         .massage_prices_wrap .massage_item {
-            font-size: 20px;
+            font-size: 16px;
+            padding: 20px 10px;
         }
         .price_text {
             text-align: left;
@@ -319,6 +320,13 @@
             top: -494px;
             left: -134px;
             transform: rotate(-26deg) scale(0.28);
+        }
+        .image_wrap {
+            .sale {
+                top: -74px;
+                left: -150px;
+                transform: scale(.5);
+            }
         }
     }
     @media (max-width: $screen_xs_max) {
