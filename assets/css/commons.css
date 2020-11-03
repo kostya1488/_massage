@@ -4,6 +4,7 @@
   src: url("../fonts/Book_Antiqua.ttf"); }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .body {
@@ -55,12 +56,14 @@
     .body .brand_btn__secondary {
       padding: 10px;
       background: #838383;
+      -webkit-transition: .3s;
       transition: .3s; }
       .body .brand_btn__secondary:hover {
         background: #979797; }
     .body .brand_btn__primary {
       padding: 10px 50px;
       background: #755A5A;
+      -webkit-transition: .3s;
       transition: .3s; }
       .body .brand_btn__primary:hover {
         background: #8c6c6c; }
@@ -90,6 +93,7 @@
   .body .form .input {
     width: 100%;
     margin-top: 20px;
+    -webkit-filter: drop-shadow(4px 4px 10px rgba(149, 113, 104, 0.2));
     filter: drop-shadow(4px 4px 10px rgba(149, 113, 104, 0.2));
     border-radius: 5px;
     background-color: #fff;
@@ -135,6 +139,7 @@
       opacity: 1;
       visibility: visible; }
       .body.menu_show .menu li {
+        -webkit-transform: translateY(50px);
         transform: translateY(50px); }
     .body.menu_show .phone_numbers a {
       color: rgba(0, 0, 0, 0.8); }
@@ -160,10 +165,16 @@ section {
     font-size: 50px;
     color: #FDF8F4; }
   .header .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-transition: .5s;
     transition: .5s; }
     .header .menu li {
+      -webkit-transition: .5s;
       transition: .5s; }
     .header .menu li + li {
       margin-left: 40px; }
@@ -172,8 +183,15 @@ section {
       font-size: 24px; }
   @media (max-width: 1199px) {
     .header .menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
       align-items: flex-end; }
       .header .menu li + li {
         margin-left: 0;
@@ -184,6 +202,8 @@ section {
     .header {
       padding-top: 0; }
       .header .menu {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         position: fixed;
         z-index: 2;
@@ -201,8 +221,15 @@ section {
         z-index: 3;
         width: 36px;
         height: 23px;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between; }
         .header .toggle_button::before {
           content: "";
@@ -214,8 +241,10 @@ section {
           width: 36px;
           height: 36px;
           border-radius: 50%;
+          -webkit-transform: scale(1.5);
           transform: scale(1.5);
           opacity: 0;
+          -webkit-transition: .3s;
           transition: .3s; }
         .header .toggle_button:active::before {
           opacity: 1; }
@@ -230,7 +259,11 @@ section {
   margin-top: 25px; }
 
 .section_contacts .contacts_wrap li a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: rgba(0, 0, 0, 0.9); }
 
@@ -242,6 +275,7 @@ section {
     position: absolute;
     bottom: -268px;
     right: 77px;
+    -webkit-transform: rotate(159deg) scale(0.7);
     transform: rotate(159deg) scale(0.7); }
   .services .services_title {
     font-weight: 500;
